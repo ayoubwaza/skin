@@ -9,7 +9,7 @@ import fouthProb from "../Images/faceProb.jpg";
 import proP from "../Images/prod.png";
 import ghana from "../Images/ghana.webp";
 import camelia from "../Images/c.gif";
-import sharapo from '../Images/sharapo.gif';
+import sharapo from "../Images/sharapo.gif";
 import secret from "../Images/secret.png";
 import bgBenifet from "../Images/benifet.png";
 import explosion from "../Images/explosion.png";
@@ -228,12 +228,7 @@ export default function Home() {
         <div className={styles.__smile}>
           <div className={styles.__smile__Child}>
             <div className={styles.__handle__ttz}>
-              <img
-                src={sharapo}
-                width="100%"
-                height="100%"
-                alt=""
-              />
+              <img src={sharapo} width="100%" height="100%" alt="" />
             </div>
             <div className={styles.__content__smile}>
               <div>
@@ -263,7 +258,7 @@ export default function Home() {
                 </h2>
               </div>
               <div>
-              <Button variant="contained" color="secondary">
+                <Button variant="contained" color="secondary">
                   أطــلبي الآن{" "}
                   <span>
                     <FaCartPlus />
@@ -576,7 +571,6 @@ export default function Home() {
         <div className={styles.__way_how}>
           <h1>كيفآش نستآعمل TEST ؟ </h1>
           <div className={styles.__way__Child}>
-            
             <div className={styles.__each__Way}>
               <div>
                 <span>1</span>
