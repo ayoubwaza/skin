@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "framer-motion": "^4.1.17",
     "google-spreadsheet": "^3.1.15",
     "imagemin-mozjpeg": "^9.0.0",
     "next": "10.2.3",
