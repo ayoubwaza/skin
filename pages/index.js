@@ -469,7 +469,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.__handle_Img__exp}>
-              <img src={explosion} width="100%" height="100%" alt="" />
+              <img src="https://skinPics.b-cdn.net/explosion.png" width="100%" height="100%" alt="" />
             </div>
             <div className={styles.__first_exp__Three}>
               <div className={styles.__each__Exp}>
@@ -488,7 +488,7 @@ export default function Home() {
               </div>
               <div className={styles.__each__Exp}>
                 <div className={styles.__handle__Img_each__exp}>
-                  <img src={Erk} width="100%" height="100%" alt="" />
+                  <img src="https://skinPics.b-cdn.net/erk.webp" width="100%" height="100%" alt="" />
                 </div>
                 <h3>عرق سوس</h3>
                 <p>يحفز تكوين ألياف الكولاجين وينعم التجاعيد ويحارب الوذمة.</p>
@@ -590,7 +590,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <img src={WomenSmile} width="100%" height="100%" alt="" />
+              <img src="https://skinPics.b-cdn.net/WomenSmile.webp" width="100%" height="100%" alt="" />
             </div>
           </div>
         </div>
@@ -680,7 +680,7 @@ export default function Home() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ type: "spring", stiffness: 140 }}
                 >
-                  <img src={WomenSmile} width="100%" height="100%" alt="" />
+                  <img src="https://skinPics.b-cdn.net/WomenSmile.webp" width="100%" height="100%" alt="" />
                 </motion.div>
                 <p>default</p>
                 <h3>world hello</h3>
