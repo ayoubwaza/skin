@@ -60,7 +60,6 @@ export default function Home() {
   //submit form
   const submitedForm = (e) => {
     e.preventDefault();
-
     if (
       phone.length <= 0 ||
       name.length <= 0 ||
@@ -77,6 +76,21 @@ export default function Home() {
     ) {
       setCheckPhoneNumb(true);
     } else {
+      /*
+        function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-586076706/haYWCIr55-4BEKKku5cC",
+          event_callback: callback,
+        });
+        return false;
+      }
+      gtag_report_conversion();
+      */
       resetAll();
       var dataSet = {
         name: name,
