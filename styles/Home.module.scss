@@ -866,4 +866,48 @@ $rgb: rgb(33, 31, 31);
   .__thanks{
   overflow-y: scroll;
   }
+  .__explosion {
+    .__each__Exp {
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      flex-direction: $cl;
+      text-align: center;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      padding: 10px;
+      margin-top: 15px;
+      height: 100%;
+      z-index: 9999;
+      transition: 400ms ease-out;
+      filter: drop-shadow(4px 90px 30px #f7c6c6);
+      box-shadow: 0 5px 2px 0 $rgb;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      h3 {
+        text-transform: uppercase;
+        margin: 0%;
+      }
+      p {
+        text-align: center;
+        width: 200px;
+        margin: 0%;
+        font-weight: bold;
+        font-size: 17px;
+      }
+      img {
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 400ms ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      .__handle__Img_each__exp {
+        width: 200px;
+      }
+    }
+  }
 }
