@@ -687,6 +687,43 @@ $rgb: rgb(33, 31, 31);
 .__thanks__Child li{
   list-style: none;
 }
+.__btn__page__Thanks{
+    background: deeppink;
+    width: 100%;
+    padding: 7px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 5px 0 $rgb;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: 400ms ease-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+    span{
+      color: greenyellow;
+      font-size: 23px;
+      margin-left: 23px;
+    }
+}
+.__btn__page {
+  background: deeppink;
+  width: 100%;
+  padding: 7px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 5px 0 $rgb;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 400ms ease-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 @media only screen and (max-width: 800px) {
   .__form {
     padding: 20px 0 20px 0;
