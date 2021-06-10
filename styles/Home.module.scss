@@ -820,8 +820,11 @@ $rgb: rgb(33, 31, 31);
       transform: scale(1.1);
     }
   }
-  .__thanks__Child,.__handle_img__car{
+  .__thanks__Child{
     width: 100%;
+  }
+  .__handle_img__car{
+    width: 50%;
   }
   .__thanks{
   overflow-y: scroll;
