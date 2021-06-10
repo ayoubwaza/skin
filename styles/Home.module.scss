@@ -29,17 +29,20 @@ $rgb: rgb(33, 31, 31);
 //starting ...
 .__Parent {
   @include centerH();
+  background: linear-gradient(rgba(16, 14, 14, 0.4), rgba(255, 255, 255, 0.4)),
+    url("https://skinPics.b-cdn.net/Stuningunsplash.webp");
+  background-position:center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
   .__Child__pa {
-    background: url("https://media.giphy.com/media/ycfkcfxEPqPMSBvsVx/giphy.gif"),
-      #ecf1fb;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 20px 0 0 0;
-    @include centerhspace();
-    height: 80vh;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    width: 100%;
     h2 {
       font-size: 40px;
+      color: white;
     }
     .__Child_content {
       display: $f;
@@ -53,6 +56,22 @@ $rgb: rgb(33, 31, 31);
         font-size: 18px;
       }
     }
+  }
+}
+.__btn__page {
+  background: deeppink;
+  width: 350px;
+  padding: 7px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 5px 0 $rgb;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 400ms ease-out;
+  &:hover {
+    transform: scale(1.1);
   }
 }
 .__parent_Prob {
@@ -166,7 +185,7 @@ $rgb: rgb(33, 31, 31);
   }
 }
 .__ghana {
-  button{
+  button {
     width: 300px;
     border-radius: 20px;
     box-shadow: 0 10px 10px 0 $rgb;
@@ -200,9 +219,9 @@ $rgb: rgb(33, 31, 31);
       font-size: 41px;
       .__content__ghana {
         display: $f;
-      justify-content: $c;
-      align-items: $c;
-      flex-direction: $cl;
+        justify-content: $c;
+        align-items: $c;
+        flex-direction: $cl;
       }
     }
   }
@@ -280,7 +299,7 @@ $rgb: rgb(33, 31, 31);
     cursor: pointer;
     @include centerhspaceV();
     .__dif__three_each {
-      box-shadow:  0 5px 5px 0 $rgb;
+      box-shadow: 0 5px 5px 0 $rgb;
       padding: 7px;
       display: $f;
       justify-content: $c;
@@ -626,9 +645,50 @@ $rgb: rgb(33, 31, 31);
     }
   }
 }
+.__thanks{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,2,0,.8);
+  z-index: 999999;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.__thanks__Child{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(-45deg,white,green);
+  text-align: center;
+  color: white;
+}
+.__handle_img__car{
+  width: 400px;
+  border-radius: 100%;
 
+}
+.__handle_img__car img{
+  border-radius: 100%;
+}
+.__thanks__Child span{
+  color: red;
+  font-size: 34px;
+  cursor: pointer;
+}
+.__thanks__Child p{
+  margin: 0%;
+}
+.__list h2{
+  color: red;
+}
+.__thanks__Child li{
+  list-style: none;
+}
 @media only screen and (max-width: 800px) {
-  .__form{
+  .__form {
     padding: 20px 0 20px 0;
     margin: 60px 0 30px 0;
     .__form__Child {
@@ -661,7 +721,7 @@ $rgb: rgb(33, 31, 31);
   .__nature__Child {
     flex-direction: $cl;
   }
-  .__ghana__Child{
+  .__ghana__Child {
     flex-direction: column-reverse;
   }
   .__way__Child {
@@ -711,12 +771,11 @@ $rgb: rgb(33, 31, 31);
   }
   .__Parent {
     @include centerH();
+    background: linear-gradient(rgba(16, 14, 14, 0.4), rgba(255, 255, 255, 0.4)),
+      url("https://skinPics.b-cdn.net/Stuningunsplash.webp");
+    background-position: center center;
+    background-size: cover;
     .__Child__pa {
-      background: url("https://media.giphy.com/media/ycfkcfxEPqPMSBvsVx/giphy.gif"),
-        #ecf1fb;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
       margin: 0px 0 0 0;
       @include centerhspace();
       height: 100vh;
@@ -744,5 +803,27 @@ $rgb: rgb(33, 31, 31);
   }
   .__handle__confim_img {
     width: 100%;
+  }
+  .__btn__page {
+    background: deeppink;
+    width: 100%;
+    padding: 7px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 5px 0 $rgb;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: 400ms ease-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .__thanks__Child,.__handle_img__car{
+    width: 100%;
+  }
+  .__thanks{
+  overflow-y: scroll;
   }
 }

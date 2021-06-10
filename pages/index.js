@@ -1,28 +1,23 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import secret from "../Images/secret.png";
-import Vitamin from "../Images/vitamin.webp";
-import Louz from "../Images/louz.webp";
-import Nature from "../Images/nature.png";
-import Chimie from "../Images/chimie.webp";
-
 import {
   FaAngleDoubleUp,
   FaAngleLeft,
   FaAngleRight,
   FaCartPlus,
   FaCheckSquare,
+  FaWindowClose,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Button, TextField } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 import { Alert, AlertTitle, Rating } from "@material-ui/lab";
 import { Link, animateScroll } from "react-scroll";
 export default function Home() {
   const [id, idSet] = useState(0);
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
-  const [addresse, setAdresse] = useState("");
+  const [addresse, setAddresse] = useState("");
   const [phone, setPhone] = useState("");
   const [stars, setStars] = useState(5);
   const [starsF, setStarsF] = useState(3);
@@ -32,12 +27,20 @@ export default function Home() {
   const [thanks, setThanks] = useState(false);
   const [errorPNumb, setCheckPhoneNumb] = useState(false);
   const [xdata, setXdata] = useState([]);
-
+  const [anime, setAnime] = useState();
+  useEffect(() => {
+      if(window.innerWidth <= 800){
+        setAnime(false)
+      }else{
+        return setAnime(true)
+      }
+  },[])
   const resetAll = () => {
     setName("");
     setAddresse("");
     setPhone("");
     setCity("");
+    setThanks(true)
   };
   const returnData = (para) => {
     setName(para.name);
@@ -53,7 +56,10 @@ export default function Home() {
       setCheckPhoneNumb(false);
     }, 1500);
   }
-  const submitedForm = () => {
+  //submit form
+  const submitedForm = (e) => {
+    e.preventDefault();
+
     if (
       phone.length <= 0 ||
       name.length <= 0 ||
@@ -77,6 +83,7 @@ export default function Home() {
         addresse: addresse,
         phone: phone,
       };
+      alert(dataSet)
       setXdata([dataSet]);
     }
   };
@@ -99,7 +106,6 @@ export default function Home() {
   };
   funcSlider();
   */
-
   return (
     <div>
       <Head>
@@ -122,9 +128,67 @@ export default function Home() {
             user-select: none;
             direction: rtl;
             font-family: "Amiri", serif;
+            overflow-y: ${thanks ? "hidden" : null};
           }
         `}
       </style>
+      {
+        thanks ? (
+          <section id="thanks" className={styles.__thanks}>
+          <div className={styles.__thanks__Child}>
+            <div>
+              <p>
+                الطــلب ديآلكم تسجل بنجآح
+              </p>
+              <p>
+                الأمآنة ديآلكم غآدي توصلك في أقرب وقت <br/>
+                وحتآل بآب الدآر
+              </p>
+              <p>
+                شُـــكراً
+              </p>
+            </div>
+            <div className={styles.__handle_img__car}>
+              <img src="https://skinPics.b-cdn.net/thanks.webp" width="100%" height="100%" alt=""/>
+            </div>
+            <div>
+              <span onClick={() => setThanks(false)}>
+                <FaWindowClose/>
+              </span>
+            </div>
+            <div className={styles.__list}>
+              <h2>
+                المرجوآ التأكد من المعلومآت التي أدخلنموهآ مسبقاً
+              </h2>
+              {
+                xdata.map((data,i) => {
+                  return(
+                    <div key={i}>
+                      <ul>
+                        <li>
+                           الإسم الكآمل : {data.name}
+                        </li>
+                        <li>
+                         المدينة :  {data.city} 
+                        </li>
+                        <li>
+                         العنوان :  {data.addresse}
+                        </li>
+                        <li>
+                         الهاتف :  {data.phone}
+                        </li>
+                      </ul>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
+      </section>
+        )
+        :
+        null
+      }
       <section id="gif">
         <div className={styles.__Parent}>
           <div className={styles.__Child__pa}>
@@ -141,9 +205,9 @@ export default function Home() {
                 offset={50}
                 hashSpy={true}
               >
-                <Button variant="contained" color="secondary">
+                <button className={styles.__btn__page} >
                   أطــلبي الآن
-                </Button>
+                </button>
               </Link>
             </div>
           </div>
@@ -196,9 +260,9 @@ export default function Home() {
                 <br />
                 ويقلل من مخاطر التغيرات المبكرة المرتبطة بالعمر.
               </p>
-              <Button variant="contained" color="secondary">
+              <button  className={styles.__btn__page}>
                 أطــلبي الآن
-              </Button>
+              </button>
             </div>
             <div>
               <img src="https://skinPics.b-cdn.net/product.png" width="100%" height="100%" alt="" />
@@ -210,19 +274,19 @@ export default function Home() {
         <div className={styles.__smile}>
           <div className={styles.__smile__Child}>
             <div className={styles.__handle__ttz}>
-              <img src="https://skinPics.b-cdn.net/sharapo.gif" width="100%" height="100%" alt="" />
+              <img src="https://skinPics.b-cdn.net/sharapoV.gif" width="100%" height="100%" alt="" />
             </div>
             <div className={styles.__content__smile}>
               <div>
                 <h2>رجعي الإبتســآمة ليك و لكآع اللّي دآيرين بك</h2>
               </div>
               <div>
-                <Button variant="contained" color="secondary">
+                <button  className={styles.__btn__page}>
                   أطــلبي الآن{" "}
                   <span>
                     <FaCartPlus />
                   </span>
-                </Button>
+                </button>
               </div>
             </div>
           </div>
@@ -240,12 +304,12 @@ export default function Home() {
                 </h2>
               </div>
               <div>
-                <Button variant="contained" color="secondary">
+                <button  className={styles.__btn__page}>
                   أطــلبي الآن{" "}
                   <span>
                     <FaCartPlus />
                   </span>
-                </Button>
+                </button>
               </div>
             </div>
             <div className={styles.__handl_Ghana}>
@@ -258,7 +322,7 @@ export default function Home() {
         <div className={styles.__secret}>
           <div className={styles.__secret__Child}>
             <div className={styles.__handle__ttz}>
-              <img src="https://skinPics.b-cdn.net/c.gif" width="100%" height="100%" alt="" />
+              <img src="https://skinPics.b-cdn.net/c.webp" width="100%" height="100%" alt="" />
             </div>
             <div className={styles.__content__secret}>
               <div>
@@ -269,12 +333,12 @@ export default function Home() {
                 </h2>
               </div>
               <div>
-                <Button variant="contained" color="secondary">
+                <button  className={styles.__btn__page}>
                   أطــلبي الآن{" "}
                   <span>
                     <FaCartPlus />
                   </span>
-                </Button>
+                </button>
               </div>
             </div>
           </div>
@@ -400,7 +464,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <img src={secret} width="100%" height="100%" alt="" />
+              <img src="https://skinPics.b-cdn.net/secret.png" width="100%" height="100%" alt="" />
             </div>
           </div>
         </div>
@@ -491,7 +555,7 @@ export default function Home() {
           <h1>طــبيعــي %100</h1>
           <div className={styles.__nature__Child}>
             <div>
-              <img src={Nature} width="100%" height="100%" alt="" />
+              <img src="https://skinPics.b-cdn.net/nature.png" width="100%" height="100%" alt="" />
             </div>
             <div>
               <img src="https://skinPics.b-cdn.net/nature.webp" width="100%" height="80%" alt="" />
@@ -510,9 +574,9 @@ export default function Home() {
                 سنًا.
               </p>
               <div>
-                <Button variant="contained" color="secondary">
+                <button  className={styles.__btn__page}>
                   أطــلبي الآن
-                </Button>
+                </button>
               </div>
             </div>
             <div>
@@ -581,7 +645,7 @@ export default function Home() {
         <h1>سآلي المجرب لاتسآلي الطبيب ؟</h1>
         <div className={styles.__reviews__Child}>
           <div>
-            <button onClick={AddSlide} disabled={id === 3}>
+            <button  onClick={AddSlide} disabled={id === 3}>
               <FaAngleRight />
             </button>
           </div>
@@ -589,7 +653,7 @@ export default function Home() {
             {id === 1 ? (
               <motion.div
                 className={styles.__each__Slider}
-                initial={{ opacity: 0, x: -200 }}
+                initial={anime ? { opacity: 0, x: -200 } : null}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
               >
@@ -610,13 +674,13 @@ export default function Home() {
             ) : id === 2 ? (
               <div
                 className={styles.__each__Slider}
-                initial={{ opacity: 0, x: -200 }}
+                initial={anime ? { opacity: 0, x: -200 } : null}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
               >
                 <motion.div
                   className={styles.__handle__image__Sliders}
-                  initial={{ opacity: 0, x: -200 }}
+                  initial={anime ? { opacity: 0, x: -200 } : null}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ type: "spring", stiffness: 140 }}
                 >
@@ -636,7 +700,7 @@ export default function Home() {
             ) : id === 3 ? (
               <motion.div
                 className={styles.__each__Slider}
-                initial={{ opacity: 0, x: -200 }}
+                initial={anime ? { opacity: 0, x: -200 } : null}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
               >
@@ -658,7 +722,7 @@ export default function Home() {
               <div className={styles.__each__Slider}>
                 <motion.div
                   className={styles.__handle__image__Sliders}
-                  initial={{ opacity: 0, x: -200 }}
+                  initial={anime ? { opacity: 0, x: -200 } : null}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ type: "spring", stiffness: 140 }}
                 >
@@ -736,7 +800,7 @@ export default function Home() {
                       required
                       type="text"
                       value={addresse}
-                      onChange={(e) => setAdresse(e.target.value)}
+                      onChange={(e) => setAddresse(e.target.value)}
                       variant="outlined"
                       label="العنوآن"
                     />
@@ -752,16 +816,15 @@ export default function Home() {
                     />
                   </div>
                   <div id="target" className={styles.__handle_btn_submit}>
-                    <Button
+                    <button
                       onClick={submitedForm}
-                      variant="contained"
-                      color="secondary"
+                      className={styles.__btn__page}
                     >
                       أطــلبي الآن{" "}
                       <span>
                         <FaCartPlus />
                       </span>
-                    </Button>
+                    </button>
                   </div>
                 </form>
               </div>
