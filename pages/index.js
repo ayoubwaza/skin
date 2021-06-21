@@ -60,6 +60,26 @@ export default function Home() {
   //submit form
   const submitedForm = (e) => {
     e.preventDefault();
+    //const SPREADSHEET_ID = "1leW75fm6hH7aQAxVgpbLoykDKfV43Cxrmwfi8Kp_uxA";
+    //const SHEET_ID = "0";
+    //const CLIENT_EMAIL = "derma-771@derma-317208.iam.gserviceaccount.com";
+    //const PRIVATE_KEY ="-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTXIp1UDcVdiH0\n83ThjubPlAci4m+egh60CjLF/WpXzJDsImTz5XMJwQ05QkH5rudcvjC0eJIKAFcw\nS+y21jQwGfPRN7fDXkxyUPylsfJsJRd6X/BEY4ZYpgNXsUarzxW1RmiRkkkTtpoR\nkJBGmVu8ALGhRZcEV1dsEucjRknjTKslB4bPPNJqDWGFKddooJsTHe7Kv6QC0mFO\nkXb7sycMxckPXI0wbAP70FfzHOhTuE2D3EeSV28TYc/A2YeXO+sNk26/uoJbm1KR\n4RJhOAM7I2clxk3GHtpCYrEzwVGY/xbtN4dKRdTC8l7qgZ6zLXBtkHWiHnPGxmJs\nfG/hp60nAgMBAAECggEAANivPxrm9dZ8HMUHF6FrMV1Mg1LdF0yVndJAmB3968iS\nAT2bNJ0sicY1PnJKg7jwWiOWG2tEQtTdYQTx+qGly+YH8Mv6V92phX2bf/ZnnoBG\nClzTMbfR2qY1dv8cmT4BebzObHkNIfxKR5Uxji7F76ZmVonSCDn6+qZ4b5FSIIVv\njJQKXmS+7XjgS3iaZ7W8GE9MFFtlgufS320FdK5UG0idwIDR9QvM4p2pWe7wzNaH\neDBhhOd6w/IjSNbGg4ul3z3ZeFDcTWMVQsuS0KlVufz9s8zf828kNxR+Tvya6Y9y\nLHp5+1hEoHNG3tqh/YB9Hzl0btXB7ZIGeyyjhZAF6QKBgQDE5Cw1lZ7FIbFwz2Nj\nxM71qXta7eUmGSflA9NVfesbM81mVe2DL3vN7Rs4B2gbaez97bJzbC/617mrHCib\nqSFfGwWiWb7PDMJeh4eyU3OdNnmt66JZea6OlnxokRG7kIhP22fLCIwz4Qp9GDFb\nMINTq9bFbLDp1l9aOrxapJaNXwKBgQC/mdF4cHtnC52uVQ5ka/g2oXk+7Of2mBUv\n1Z/cWWm/7BdCq0/Q5HxXCB3MzPtNa5gNmor9tpSqExgkX7j8Kjvv08+1XHfGiErG\nNT1q6BjhG/z6fZb6OFMugioGmyd6PEGQAMBn+T/DS+hdrfjF5zq9LvoT3wo8OMMi\ncwro/wetOQKBgE5uwrm515yZ9nCE/QfSb8tm72/iksUhgkX1xysoVQ7qDOm2Uz5O\nHRiEWrJwKOW6xaDGHq9iKp7Xbuwd9INF1bhoME9jRuJ+J7O2c7TzD3xSJhjFZFAW\nbBX7FqYlHBZG1jZRpcA4sHk+LYp1p7u20Kn1K0JMMRGFx0hPW5cUN7ErAoGAFoCp\nQlzrkVmi5kOlEhRALaJfTA2k3KhV7K1JPibeLaU7wh++mwkKtWoFnfUBGsGlNQvO\ngSe9ZBAkCLmZTzxil7MntOQsSQvexFKiaPjjWyTfXEf9wFt3IYI2D1qPk2KaTKBZ\n+JwkafpzSvVQv2V915Q52LWcTSBZgqVCRcUWELkCgYEAifoe1b/N1s9KD2UQBprx\n1JEyePC8Vssucux/8OmS5LqDqvg3JogYZr/XefxTnik60WzcdRIEMfZJU/pycO9p\nzfSFanblX3ERhVX/mIJeNJzc1uKYZAEDJ7J+3qHd1BWcQ1eKzeu1rFM9IpsKD75F\nOhkYppqgzLtjEx6JK7TrgjQ=\n-----END PRIVATE KEY-----\n"
+    //const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
+    const appendSpreadsheet = async (row) => {
+      try {
+        await doc.useServiceAccountAuth({
+          client_email: CLIENT_EMAIL,
+          private_key: PRIVATE_KEY,
+        });
+        // loads document properties and worksheets
+        await doc.loadInfo();
+
+        const sheet = doc.sheetsById[SHEET_ID];
+        const result = await sheet.addRow(row);
+      } catch (e) {
+        console.error("Error: ", e);
+      }
+    };
     if (
       phone.length <= 0 ||
       name.length <= 0 ||
@@ -77,6 +97,9 @@ export default function Home() {
       setCheckPhoneNumb(true);
     } else {
       /*
+       appendSpreadsheet(newRow)
+      .then(() => resetAll())
+      .catch((err) => console.log(err));
         function gtag_report_conversion(url) {
         var callback = function () {
           if (typeof url != "undefined") {
@@ -204,7 +227,28 @@ export default function Home() {
       <section id="gif">
         <div className={styles.__Parent}>
           <div className={styles.__Child__pa}>
-            <div className={styles.__Child_content}>
+            <motion.div className={styles.__Child_content}
+              initial="hidden"
+              animate="visible"
+              variants={{
+                  hidden:{
+                    opacity:0,
+                    y:-200
+                  },
+                  visible:{
+                    opacity:1,
+                    y:0,
+                    scale:1.1,
+                    color:"#DDD",
+                    transition:{
+                      type:"spring",
+                      stiffness:'40',
+                      ease: [0.17, 0.67, 0.83, 0.67]
+                    }
+                  }
+
+              }}
+            >
               <h2>
                 البشرة النّـــآصعة
                 <br />
@@ -219,7 +263,7 @@ export default function Home() {
               >
                 <button className={styles.__btn__page}>أطــلبي الآن</button>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
