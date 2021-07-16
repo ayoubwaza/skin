@@ -31,10 +31,12 @@ $rgb: rgb(33, 31, 31);
   @include centerH();
   background: linear-gradient(rgba(16, 14, 14, 0.4), rgba(255, 255, 255, 0.4)),
     url("https://skinPics.b-cdn.net/Stuningunsplash.webp");
-  background-position:center;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  flex-direction: $cl;
+  position: relative;
   .__Child__pa {
     display: $f;
     justify-content: $c;
@@ -58,9 +60,31 @@ $rgb: rgb(33, 31, 31);
     }
   }
 }
-.__Id_Prod{
-  background:url("https://skinPics.b-cdn.net/leaves.webp");
-  background-position:center center;
+.__svg{
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  width: 100%;
+  height: 100vh;
+  .__svg__Child{
+    width: 80%;
+    display: $f;
+    justify-content: flex-start;
+    align-items: $c;
+    .hold__svg{
+      width:721px;
+      height:582px;
+      svg{
+        ellipse{
+          background: #000;
+        }
+      }
+    }
+  }
+}
+.__Id_Prod {
+  background: url("https://skinPics.b-cdn.net/leaves.webp");
+  background-position: center center;
   background-size: cover;
   height: 100%;
 }
@@ -338,9 +362,9 @@ $rgb: rgb(33, 31, 31);
 .__explosion {
   @include centerH();
   flex-direction: column;
-  background:url("https://skinPics.b-cdn.net/leaves.webp"), #f7c6c6;
+  background: url("https://skinPics.b-cdn.net/leaves.webp"), #f7c6c6;
   background-repeat: no-repeat;
-  background-position:bottom center;
+  background-position: bottom center;
   color: white;
   .__explosion__Child {
     @include centerhspace();
@@ -369,8 +393,9 @@ $rgb: rgb(33, 31, 31);
     height: 410px;
     z-index: 9999;
     transition: 400ms ease-out;
-    filter: drop-shadow(4px 90px 30px #f7c6c6);
-    box-shadow: 0 5px 2px 0 $rgb;
+    box-shadow:0 5px 2px 0 $rgb;
+    background: rgba(247, 198, 198, 0.8);
+    backdrop-filter: blur(20px);
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
@@ -414,6 +439,10 @@ $rgb: rgb(33, 31, 31);
 .__care {
   @include centerH();
   flex-direction: column;
+  background: url("https://skinPics.b-cdn.net/dsvg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   h1 {
     font-size: 34px;
     text-shadow: 0 3px 3px $rgb;
@@ -439,10 +468,6 @@ $rgb: rgb(33, 31, 31);
 .__confirm {
   @include centerH();
   flex-direction: column;
-  background: url('https://skinPics.b-cdn.net/dsvg.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   cursor: pointer;
   padding: 10px 0 10px 0;
   h1 {
@@ -484,6 +509,7 @@ $rgb: rgb(33, 31, 31);
   flex-direction: column;
   cursor: pointer;
   padding: 10px 0 10px 0;
+  background:#ecf1fb;
   h1 {
     font-size: 34px;
     text-shadow: 0 3px 3px $rgb;
@@ -656,68 +682,68 @@ $rgb: rgb(33, 31, 31);
     }
   }
 }
-.__thanks{
+.__thanks {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: rgba(0,2,0,.8);
+  background: rgba(0, 2, 0, 0.8);
   z-index: 999999;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.__thanks__Child{
+.__thanks__Child {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(-45deg,white,green);
+  background: linear-gradient(-45deg, white, #f7c6c6);
   text-align: center;
-  color: white;
+  color: $rgb;
+  font-weight: bold;
 }
-.__handle_img__car{
+.__handle_img__car {
   width: 400px;
   border-radius: 100%;
-
 }
-.__handle_img__car img{
+.__handle_img__car img {
   border-radius: 100%;
 }
-.__thanks__Child span{
+.__thanks__Child span {
   color: red;
   font-size: 34px;
   cursor: pointer;
 }
-.__thanks__Child p{
+.__thanks__Child p {
   margin: 0%;
 }
-.__list h2{
+.__list h2 {
   color: red;
 }
-.__thanks__Child li{
+.__thanks__Child li {
   list-style: none;
 }
-.__btn__page__Thanks{
-    background: deeppink;
-    width: 100%;
-    padding: 7px;
-    font-size: 22px;
-    border: none;
-    outline: none;
-    box-shadow: 0 5px 5px 0 $rgb;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-    transition: 400ms ease-out;
-    &:hover {
-      transform: scale(1.1);
-    }
-    span{
-      color: greenyellow;
-      font-size: 23px;
-      margin-left: 23px;
-    }
+.__btn__page__Thanks {
+  background: deeppink;
+  width: 100%;
+  padding: 7px;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 5px 0 $rgb;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 400ms ease-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+  span {
+    color: greenyellow;
+    font-size: 23px;
+    margin-left: 23px;
+  }
 }
 .__btn__page {
   background: deeppink;
@@ -736,6 +762,28 @@ $rgb: rgb(33, 31, 31);
   }
 }
 @media only screen and (max-width: 800px) {
+  .__svg{
+    height: 100%;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    width: 100%;
+    .__svg__Child{
+      width: 80%;
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      .hold__svg{
+        width:300px;
+        height:auto;
+        svg{
+          ellipse{
+            border: 10px solid red;
+          }
+        }
+      }
+    }
+  }
   .__form {
     padding: 20px 0 20px 0;
     margin: 60px 0 30px 0;
@@ -868,14 +916,14 @@ $rgb: rgb(33, 31, 31);
       transform: scale(1.1);
     }
   }
-  .__thanks__Child{
+  .__thanks__Child {
     width: 100%;
   }
-  .__handle_img__car{
+  .__handle_img__car {
     width: 50%;
   }
-  .__thanks{
-  overflow-y: scroll;
+  .__thanks {
+    overflow-y: scroll;
   }
   .__explosion {
     .__each__Exp {
@@ -926,7 +974,7 @@ $rgb: rgb(33, 31, 31);
     flex-direction: column;
     h1 {
       font-size: 34px;
-      text-shadow: 0 0 0  $rgb;
+      text-shadow: 0 0 0 $rgb;
     }
     .__child__Dif {
       @include centerhspace();
@@ -951,7 +999,7 @@ $rgb: rgb(33, 31, 31);
         align-items: $c;
         flex-direction: $cl;
         margin-bottom: 20px;
-        filter: drop-shadow(0px 0 0 0 );
+        filter: drop-shadow(0px 0 0 0);
         transition: 400ms ease-in-out;
         width: 100%;
         &:hover {
