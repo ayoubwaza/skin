@@ -267,13 +267,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section
-        style={{
-          backgroundImage: `url(${BgSvg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section>
         <div className={styles.__svg}>
           <div className={styles.__svg__Child}>
             <div className={styles.hold__svg}>
@@ -449,7 +443,7 @@ export default function Home() {
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -488,7 +482,7 @@ export default function Home() {
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -691,7 +685,7 @@ export default function Home() {
             <div className={styles.__four__Prob}>
               <div className={styles.__Id_Prod}>
                 <img
-                  src="https://skinPics.b-cdn.net/prod.png"
+                  src="https://skin-new-pullzone.b-cdn.net/prod.webp"
                   width="100%"
                   height="100%"
                   alt=""
@@ -700,7 +694,7 @@ export default function Home() {
               <div>
                 <div className={styles.__each_Prob}>
                   <img
-                    src="https://skinPics.b-cdn.net/headProb.jpg"
+                    src="https://skin-new-pullzone.b-cdn.net/headProb.jpg"
                     width="100%"
                     height="100%"
                     alt=""
@@ -709,7 +703,7 @@ export default function Home() {
                 </div>
                 <div className={styles.__each_Prob}>
                   <img
-                    src="https://skinPics.b-cdn.net/mouthProb.jpg"
+                    src="https://skin-new-pullzone.b-cdn.net/mouthProb.jpg"
                     width="100%"
                     height="100%"
                     alt=""
@@ -718,7 +712,7 @@ export default function Home() {
                 </div>
                 <div className={styles.__each_Prob}>
                   <img
-                    src="https://skinPics.b-cdn.net/noiseProb.jpg"
+                    src="https://skin-new-pullzone.b-cdn.net/noiseProb.jpg"
                     width="100%"
                     height="100%"
                     alt=""
@@ -727,7 +721,7 @@ export default function Home() {
                 </div>
                 <div className={styles.__each_Prob}>
                   <img
-                    src="https://skinPics.b-cdn.net/faceProb.jpg"
+                    src="https://skin-new-pullzone.b-cdn.net/faceProb.jpg"
                     width="100%"
                     height="100%"
                     alt=""
@@ -741,7 +735,7 @@ export default function Home() {
       </section>
       <section
         style={{
-          background: `url(https://skinPics.b-cdn.net/leaves.webp)`,
+          background: `url(https://skin-new-pullzone.b-cdn.net/leaves.webp)`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
@@ -762,7 +756,7 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="https://skinPics.b-cdn.net/product.png"
+                src="https://skin-new-pullzone.b-cdn.net/product.webp"
                 width="100%"
                 height="100%"
                 alt=""
@@ -776,7 +770,7 @@ export default function Home() {
           <div className={styles.__smile__Child}>
             <div className={styles.__handle__ttz}>
               <img
-                src="https://skinPics.b-cdn.net/sharapoV.gif"
+                src="https://skin-new-pullzone.b-cdn.net/sharapoV.gif"
                 width="100%"
                 height="100%"
                 alt=""
@@ -820,7 +814,7 @@ export default function Home() {
             </div>
             <div className={styles.__handl_Ghana}>
               <img
-                src="https://skinPics.b-cdn.net/ghana.webp"
+                src="https://skin-new-pullzone.b-cdn.net/ghana.webp"
                 width="100%"
                 height="100%"
                 alt=""
@@ -834,7 +828,7 @@ export default function Home() {
           <div className={styles.__secret__Child}>
             <div className={styles.__handle__ttz}>
               <img
-                src="https://skinPics.b-cdn.net/c.webp"
+                src="https://skin-new-pullzone.b-cdn.net/c.webp"
                 width="100%"
                 height="100%"
                 alt=""
@@ -863,7 +857,7 @@ export default function Home() {
       <section id="definition">
         <div
           style={{
-            background: `url(https://skinPics.b-cdn.net/benifet.png)`,
+            background: `url(https://skin-new-pullzone.b-cdn.net/benifet.png)`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
@@ -981,7 +975,7 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="https://skinPics.b-cdn.net/secret.png"
+                src="https://skin-new-pullzone.b-cdn.net/secret.webp"
                 width="100%"
                 height="100%"
                 alt=""
@@ -998,7 +992,7 @@ export default function Home() {
               <div className={styles.__each__Exp}>
                 <div className={styles.__handle__Img_each__exp}>
                   <img
-                    src="https://skinPics.b-cdn.net/vitamin.webp"
+                    src="https://skin-new-pullzone.b-cdn.net/vitamin.webp"
                     width="100%"
                     height="100%"
                     alt=""
@@ -1016,7 +1010,7 @@ export default function Home() {
               <div className={styles.__each__Exp}>
                 <div className={styles.__handle__Img_each__exp}>
                   <img
-                    src="https://skinPics.b-cdn.net/louz.webp"
+                    src="https://skin-new-pullzone.b-cdn.net/louz.webp"
                     width="100%"
                     height="100%"
                     alt=""
@@ -1052,7 +1046,7 @@ export default function Home() {
             </div>
             <div className={styles.__handle_Img__exp}>
               <img
-                src="https://skinPics.b-cdn.net/explosion.png"
+                src="https://skin-new-pullzone.b-cdn.net/colagene.webp"
                 width="100%"
                 height="100%"
                 alt=""
@@ -1062,7 +1056,7 @@ export default function Home() {
               <div className={styles.__each__Exp}>
                 <div className={styles.__handle__Img_each__exp}>
                   <img
-                    src="https://skinPics.b-cdn.net/chimie.webp"
+                    src="https://skin-new-pullzone.b-cdn.net/chimie.webp"
                     width="100%"
                     height="100%"
                     alt=""
@@ -1081,7 +1075,7 @@ export default function Home() {
               <div className={styles.__each__Exp}>
                 <div className={styles.__handle__Img_each__exp}>
                   <img
-                    src="https://skinPics.b-cdn.net/erk.webp"
+                    src="https://skin-new-pullzone.b-cdn.net/erk.webp"
                     width="100%"
                     height="100%"
                     alt=""
@@ -1097,7 +1091,7 @@ export default function Home() {
       <section id="nature">
         <div
           style={{
-            background: `url("https://skinPics.b-cdn.net/benifet.png")`,
+            background: `url(https://skin-new-pullzone.b-cdn.net/benifet.png)`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
@@ -1107,7 +1101,7 @@ export default function Home() {
           <div className={styles.__nature__Child}>
             <div>
               <img
-                src="https://skinPics.b-cdn.net/nature.png"
+                src="https://skin-new-pullzone.b-cdn.net/nature.png"
                 width="100%"
                 height="100%"
                 alt=""
@@ -1115,7 +1109,7 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="https://skinPics.b-cdn.net/nature.webp"
+                src="https://skin-new-pullzone.b-cdn.net/nature.webp"
                 width="100%"
                 height="80%"
                 alt=""
@@ -1140,7 +1134,7 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="https://skinPics.b-cdn.net/prod.png"
+                src="https://skin-new-pullzone.b-cdn.net/prod.webp"
                 width="100%"
                 height="100%"
                 alt=""
@@ -1156,7 +1150,7 @@ export default function Home() {
             <div className={styles.__confirm__Child__Each}>
               <div className={styles.__handle__confim_img}>
                 <img
-                  src="https://skinPics.b-cdn.net/form.webp"
+                  src="https://skin-new-pullzone.b-cdn.net/clipboard.png"
                   width="100%"
                   height="100%"
                   alt=""
@@ -1168,7 +1162,7 @@ export default function Home() {
             <div className={styles.__confirm__Child__Each}>
               <div className={styles.__handle__confim_img}>
                 <img
-                  src="https://skinPics.b-cdn.net/call.webp"
+                  src="https://skin-new-pullzone.b-cdn.net/beer-bottle.png"
                   width="100%"
                   height="100%"
                   alt=""
@@ -1180,7 +1174,7 @@ export default function Home() {
             <div className={styles.__confirm__Child__Each}>
               <div className={styles.__handle__confim_img}>
                 <img
-                  src="https://skinPics.b-cdn.net/gift.webp"
+                  src="https://skin-new-pullzone.b-cdn.net/support.png"
                   width="100%"
                   height="100%"
                   alt=""
@@ -1228,127 +1222,80 @@ export default function Home() {
       <section className={styles.__reviews}>
         <h1>سآلي المجرب لاتسآلي الطبيب ؟</h1>
         <div className={styles.__reviews__Child}>
-          <div>
-            <button onClick={AddSlide} disabled={id === 3}>
-              <FaAngleRight />
-            </button>
+          <div className={styles.__each__Slider}>
+            <div className={styles.__handle__image__Sliders}>
+              <img
+                src="https://skin-new-pullzone.b-cdn.net/w1.jpg"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <p>hello world</p>
+            <h3>world hello</h3>
+            <Rating
+              dir="ltr"
+              name="simple-controlled"
+              value={stars}
+              onChange={(event, newValue) => {
+                setStars(newValue);
+              }}
+            />
           </div>
-          <div>
-            {id === 1 ? (
-              <motion.div
-                className={styles.__each__Slider}
-                initial={anime ? { opacity: 0, x: -200 } : null}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-              >
-                <div className={styles.__handle__image__Sliders}>
-                  <img
-                    src="https://skinPics.b-cdn.net/WomenSmile.webp"
-                    width="100%"
-                    height="100%"
-                    alt=""
-                  />
-                </div>
-                <p>hello world</p>
-                <h3>world hello</h3>
-                <Rating
-                  dir="ltr"
-                  name="simple-controlled"
-                  value={stars}
-                  onChange={(event, newValue) => {
-                    setStars(newValue);
-                  }}
-                />
-              </motion.div>
-            ) : id === 2 ? (
-              <div
-                className={styles.__each__Slider}
-                initial={anime ? { opacity: 0, x: -200 } : null}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-              >
-                <motion.div
-                  className={styles.__handle__image__Sliders}
-                  initial={anime ? { opacity: 0, x: -200 } : null}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ type: "spring", stiffness: 140 }}
-                >
-                  <img
-                    src="https://skinPics.b-cdn.net/form.webp"
-                    width="100%"
-                    height="100%"
-                    alt=""
-                  />
-                </motion.div>
-                <p>hello world</p>
-                <h3>world hello</h3>
-                <Rating
-                  dir="ltr"
-                  name="simple-controlled"
-                  value={starsF}
-                  onChange={(event, newValue) => {
-                    setStarsF(newValue);
-                  }}
-                />
-              </div>
-            ) : id === 3 ? (
-              <motion.div
-                className={styles.__each__Slider}
-                initial={anime ? { opacity: 0, x: -200 } : null}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-              >
-                <div className={styles.__handle__image__Sliders}>
-                  <img
-                    src="https://skinPics.b-cdn.net/vitamin.webp"
-                    width="100%"
-                    height="100%"
-                    alt=""
-                  />
-                </div>
-                <p>hello world</p>
-                <h3>world hello</h3>
-                <Rating
-                  dir="ltr"
-                  name="simple-controlled"
-                  value={stars}
-                  onChange={(event, newValue) => {
-                    setStars(newValue);
-                  }}
-                />
-              </motion.div>
-            ) : (
-              <div className={styles.__each__Slider}>
-                <motion.div
-                  className={styles.__handle__image__Sliders}
-                  initial={anime ? { opacity: 0, x: -200 } : null}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ type: "spring", stiffness: 140 }}
-                >
-                  <img
-                    src="https://skinPics.b-cdn.net/WomenSmile.webp"
-                    width="100%"
-                    height="100%"
-                    alt=""
-                  />
-                </motion.div>
-                <p>default</p>
-                <h3>world hello</h3>
-                <Rating
-                  dir="ltr"
-                  name="simple-controlled"
-                  value={starsT}
-                  onChange={(event, newValue) => {
-                    setStarsT(newValue);
-                  }}
-                />
-              </div>
-            )}
+          <div
+            className={styles.__each__Slider}
+            initial={anime ? { opacity: 0, x: -200 } : null}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", stiffness: 140 }}
+          >
+            <div
+              className={styles.__handle__image__Sliders}
+              initial={anime ? { opacity: 0, x: -200 } : null}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ type: "spring", stiffness: 140 }}
+            >
+              <img
+                src="https://skin-new-pullzone.b-cdn.net/w2.jpg"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <p>hello world</p>
+            <h3>world hello</h3>
+            <Rating
+              dir="ltr"
+              name="simple-controlled"
+              value={starsF}
+              onChange={(event, newValue) => {
+                setStarsF(newValue);
+              }}
+            />
           </div>
-          <div>
-            <button onClick={SubSlide} disabled={id < 1}>
-              <FaAngleLeft />
-            </button>
+          <div
+            className={styles.__each__Slider}
+            initial={anime ? { opacity: 0, x: -200 } : null}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", stiffness: 140 }}
+          >
+            <div className={styles.__handle__image__Sliders}>
+              <img
+                src="https://skin-new-pullzone.b-cdn.net/w3.jpg"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <p>hello world</p>
+            <h3>world hello</h3>
+            <Rating
+              dir="ltr"
+              name="simple-controlled"
+              value={stars}
+              onChange={(event, newValue) => {
+                setStars(newValue);
+              }}
+            />
           </div>
         </div>
       </section>
@@ -1435,7 +1382,7 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="https://skinPics.b-cdn.net/secret.png"
+                src="https://skin-new-pullzone.b-cdn.net/secret.webp"
                 width="100%"
                 height="100%"
                 alt=""

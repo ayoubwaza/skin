@@ -30,7 +30,7 @@ $rgb: rgb(33, 31, 31);
 .__Parent {
   @include centerH();
   background: linear-gradient(rgba(16, 14, 14, 0.4), rgba(255, 255, 255, 0.4)),
-    url("https://skinPics.b-cdn.net/Stuningunsplash.webp");
+    url("https://skin-new-pullzone.b-cdn.net/Stuningunsplash.webp");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -61,6 +61,11 @@ $rgb: rgb(33, 31, 31);
   }
 }
 .__svg{
+  background:
+    url("https://skin-new-pullzone.b-cdn.net/bgsvg.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   display: $f;
   justify-content: $c;
   align-items: $c;
@@ -502,7 +507,11 @@ $rgb: rgb(33, 31, 31);
   }
 }
 .__handle__confim_img {
-  width: 400px;
+  width: 256px;
+  img{
+    filter: drop-shadow(10px 30px 0 blue);
+    color: red
+  }
 }
 .__way_how {
   @include centerH();
@@ -541,9 +550,6 @@ $rgb: rgb(33, 31, 31);
       box-shadow: 0 7px 7px 0 $rgb;
     }
   }
-  .__handle__confim_img {
-    width: 400px;
-  }
 }
 //reviews
 .__reviews {
@@ -558,14 +564,17 @@ $rgb: rgb(33, 31, 31);
   }
   .__reviews__Child {
     @include centerhspace();
+    img{
+      object-fit: cover;
+    }
     .__each__Slider {
       text-align: center;
       p {
         font-size: 18px;
       }
       .__handle__image__Sliders {
-        width: 400px;
-        height: 410px;
+        width: 330px;
+        height: 380px;
         img {
           object-fit: cover;
           border-radius: 100%;
@@ -774,8 +783,8 @@ $rgb: rgb(33, 31, 31);
       justify-content: $c;
       align-items: $c;
       .hold__svg{
-        width:300px;
-        height:auto;
+        width:100%;
+        height:100%;
         svg{
           ellipse{
             border: 10px solid red;
