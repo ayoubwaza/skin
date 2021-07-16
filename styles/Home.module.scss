@@ -77,8 +77,8 @@ $rgb: rgb(33, 31, 31);
     justify-content: flex-start;
     align-items: $c;
     .hold__svg{
-      width:721px;
-      height:582px;
+      width:582px;
+      height:auto;
       svg{
         ellipse{
           background: #000;
@@ -844,6 +844,7 @@ $rgb: rgb(33, 31, 31);
     }
     .__reviews__Child {
       @include centerhspace();
+      flex-direction: column;
       .__each__Slider {
         text-align: center;
         p {
