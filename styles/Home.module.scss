@@ -771,6 +771,11 @@ $rgb: rgb(33, 31, 31);
   }
 }
 @media only screen and (max-width: 800px) {
+ .__fixed__Btn{
+   position: fixed;
+   bottom: 0;
+   z-index: 9999999;
+ }
   .__svg{
     height: 100%;
     display: $f;
