@@ -205,26 +205,24 @@ export default function Home() {
       <section id="gif">
         <div className={styles.__Parent}>
           <div className={styles.__Child__pa}>
-            <div
-              className={styles.__Child_content}
-            >
+            <div className={styles.__Child_content}>
               <h2>
                 البشرة النّـــآصعة
                 <br />
                 سر جمآل المرأة
               </h2>
               {btn ? (
-                <div className={styles.__fixed__Btn}>
-                  <Link
-                    to="target"
-                    smooth={true}
-                    duration={2500}
-                    offset={50}
-                    hashSpy={true}
-                  >
+                <Link
+                  to="target"
+                  smooth={true}
+                  duration={2500}
+                  offset={50}
+                  hashSpy={true}
+                >
+                  <div className={styles.__fixed__Btn}>
                     <button className={styles.__btn__page}>أطــلبي الآن</button>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               ) : null}
             </div>
           </div>
