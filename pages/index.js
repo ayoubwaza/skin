@@ -8,7 +8,6 @@ import {
   FaPenAlt,
   FaWindowClose,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
 import { TextField } from "@material-ui/core";
 import { Alert, AlertTitle, Rating } from "@material-ui/lab";
 import { Link, animateScroll } from "react-scroll";
@@ -26,14 +25,6 @@ export default function Home() {
   const [thanks, setThanks] = useState(false);
   const [errorPNumb, setCheckPhoneNumb] = useState(false);
   const [xdata, setXdata] = useState([]);
-  const [anime, setAnime] = useState();
-  useEffect(() => {
-    if (window.innerWidth <= 800) {
-      setAnime(false);
-    } else {
-      return setAnime(true);
-    }
-  }, []);
   const resetAll = () => {
     setName("");
     setAddresse("");
@@ -206,6 +197,11 @@ export default function Home() {
         <div className={styles.__Parent}>
           <div className={styles.__Child__pa}>
             <div className={styles.__Child_content}>
+              <div>
+                <div>
+                  <img src="https://skin-new-pullzone.b-cdn.net/nature.png" width="100%" height="auto" alt="" />
+                </div>
+              </div>
               <h2>
                 البشرة النّـــآصعة
                 <br />
@@ -221,6 +217,9 @@ export default function Home() {
                 >
                   <div className={styles.__fixed__Btn}>
                     <button className={styles.__btn__page}>أطــلبي الآن</button>
+                    <span className={styles.__btn__page__Fix}>
+                        <FaCartPlus/>
+                    </span>
                   </div>
                 </Link>
               ) : null}
@@ -614,14 +613,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className={styles.__handle_Img__exp}>
-              <img
-                src="https://skin-new-pullzone.b-cdn.net/colagene.webp"
-                width="100%"
-                height="100%"
-                alt=""
-              />
-            </div>
             <div className={styles.__first_exp__Three}>
               <div className={styles.__each__Exp}>
                 <div className={styles.__handle__Img_each__exp}>
@@ -801,8 +792,12 @@ export default function Home() {
                 alt=""
               />
             </div>
-            <p>hello world</p>
-            <h3>world hello</h3>
+            <p>
+              النتائج كانت واعرة <br/>
+              وشبابي رجع ليا من جديد <br/>
+              أه وهاذشي في مذة قصيرة بزّآف
+            </p>
+            <h3>ثورية</h3>
             <Rating
               dir="ltr"
               name="simple-controlled"
@@ -814,15 +809,9 @@ export default function Home() {
           </div>
           <div
             className={styles.__each__Slider}
-            initial={anime ? { opacity: 0, x: -200 } : null}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 140 }}
           >
             <div
               className={styles.__handle__image__Sliders}
-              initial={anime ? { opacity: 0, x: -200 } : null}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ type: "spring", stiffness: 140 }}
             >
               <img
                 src="https://skin-new-pullzone.b-cdn.net/w2.jpg"
@@ -831,8 +820,14 @@ export default function Home() {
                 alt=""
               />
             </div>
-            <p>hello world</p>
-            <h3>world hello</h3>
+            <p>
+              الجمال هو كولشي عندي ، <br/>
+              و تانبغي ديما بشرتي تبان وتكون زوينة <br/>
+              و ريشيول حقق ليا الهذف ديالي
+            </p>
+            <h3>
+              إلهام
+            </h3>
             <Rating
               dir="ltr"
               name="simple-controlled"
@@ -844,9 +839,6 @@ export default function Home() {
           </div>
           <div
             className={styles.__each__Slider}
-            initial={anime ? { opacity: 0, x: -200 } : null}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 140 }}
           >
             <div className={styles.__handle__image__Sliders}>
               <img
@@ -856,7 +848,10 @@ export default function Home() {
                 alt=""
               />
             </div>
-            <p>hello world</p>
+            <p>
+              هدا هو النتوج اللّي كنت تانتسناه مذة طويلة هادي <br/>
+              و الصّراحة نفعني بزاف و رجع ليا ثقتي ف نفسي
+            </p>
             <h3>world hello</h3>
             <Rating
               dir="ltr"

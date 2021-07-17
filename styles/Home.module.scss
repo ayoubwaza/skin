@@ -60,9 +60,8 @@ $rgb: rgb(33, 31, 31);
     }
   }
 }
-.__svg{
-  background:
-    url("https://skin-new-pullzone.b-cdn.net/bgsvg.webp");
+.__svg {
+  background: url("https://skin-new-pullzone.b-cdn.net/bgsvg.webp");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -71,16 +70,16 @@ $rgb: rgb(33, 31, 31);
   align-items: $c;
   width: 100%;
   height: 100vh;
-  .__svg__Child{
+  .__svg__Child {
     width: 80%;
     display: $f;
     justify-content: flex-start;
     align-items: $c;
-    .hold__svg{
-      width:582px;
-      height:auto;
-      svg{
-        ellipse{
+    .hold__svg {
+      width: 582px;
+      height: auto;
+      svg {
+        ellipse {
           background: #000;
         }
       }
@@ -398,7 +397,7 @@ $rgb: rgb(33, 31, 31);
     height: 410px;
     z-index: 9999;
     transition: 400ms ease-out;
-    box-shadow:0 5px 2px 0 $rgb;
+    box-shadow: 0 5px 2px 0 $rgb;
     background: rgba(247, 198, 198, 0.8);
     backdrop-filter: blur(20px);
     &:hover {
@@ -508,9 +507,9 @@ $rgb: rgb(33, 31, 31);
 }
 .__handle__confim_img {
   width: 256px;
-  img{
+  img {
     filter: drop-shadow(10px 30px 0 blue);
-    color: red
+    color: red;
   }
 }
 .__way_how {
@@ -518,7 +517,7 @@ $rgb: rgb(33, 31, 31);
   flex-direction: column;
   cursor: pointer;
   padding: 10px 0 10px 0;
-  background:#ecf1fb;
+  background: #ecf1fb;
   h1 {
     font-size: 34px;
     text-shadow: 0 3px 3px $rgb;
@@ -564,17 +563,20 @@ $rgb: rgb(33, 31, 31);
   }
   .__reviews__Child {
     @include centerhspace();
-    img{
+    img {
       object-fit: cover;
     }
     .__each__Slider {
       text-align: center;
       p {
         font-size: 18px;
+        font-weight: bold;
+        line-height: 2;
       }
       .__handle__image__Sliders {
         width: 330px;
         height: 380px;
+        max-height: 380px;
         img {
           object-fit: cover;
           border-radius: 100%;
@@ -770,31 +772,48 @@ $rgb: rgb(33, 31, 31);
     transform: scale(1.1);
   }
 }
+.__btn__page__Fix{
+  display: none;
+}
 @media only screen and (max-width: 800px) {
- .__fixed__Btn{
-   position: fixed;
-   bottom: 0;
-   z-index: 9999999;
- }
-  .__svg{
-    height: 100%;
+  .__btn__page {
+    display: none;
+  }
+  .__btn__page__Fix{
+    display: block;
+  }
+  .__fixed__Btn{
+    position: fixed;
+    right: 5px;
+    font-size: 30px;
+    background:#f7c6c6;
+    padding: 10px;
+    border-radius: 100%;
     display: $f;
     justify-content: $c;
     align-items: $c;
-    width: 100%;
-    .__svg__Child{
-      width: 80%;
+    z-index: 99999;
+    border: 0.7px solid #ecf1fb;
+    span{
+      color: aqua;
+      position: relative;
+      top: 4px;
+    }
+  }
+  .__svg {
+    height: 100%;
+    background: url("https://skin-new-pullzone.b-cdn.net/bgsvg.webp");
+    background-position:bottom  center;
+    background-size: cover;
+    background-attachment: inherit;
+    .__svg__Child {
+      width: 100%;
       display: $f;
-      justify-content: $c;
+      justify-content: flex-start;
       align-items: $c;
-      .hold__svg{
-        width:100%;
-        height:100%;
-        svg{
-          ellipse{
-            border: 10px solid red;
-          }
-        }
+      .hold__svg {
+        width:250px;
+        height: 100%;
       }
     }
   }
@@ -838,15 +857,6 @@ $rgb: rgb(33, 31, 31);
     flex-direction: column;
   }
   .__reviews {
-    @include centerH();
-    flex-direction: column;
-    padding: 20px 0 20px 0;
-    background-color: #f7c6c6;
-    background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
-    h1 {
-      font-size: 33px;
-      text-shadow: 2px 2px 1px $rgb;
-    }
     .__reviews__Child {
       @include centerhspace();
       flex-direction: column;
@@ -856,21 +866,15 @@ $rgb: rgb(33, 31, 31);
           font-size: 18px;
         }
         .__handle__image__Sliders {
-          width: 100%;
-          height: 100%;
+          width: 300px;
+          height: 300px;
           img {
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 100%;
           }
         }
       }
       button {
-        font-size: 70px;
-        cursor: pointer;
-        background: transparent;
-        outline: none;
-        border: none;
-        transition: 400ms ease-out;
         &:hover {
           transform: scale(1);
         }
@@ -942,11 +946,6 @@ $rgb: rgb(33, 31, 31);
   }
   .__explosion {
     .__each__Exp {
-      display: $f;
-      justify-content: $c;
-      align-items: $c;
-      flex-direction: $cl;
-      text-align: center;
       border-radius: 20px;
       margin-bottom: 10px;
       padding: 10px;
@@ -954,34 +953,20 @@ $rgb: rgb(33, 31, 31);
       height: 100%;
       z-index: 9999;
       transition: 400ms ease-out;
-      filter: drop-shadow(4px 90px 30px #f7c6c6);
+      filter: drop-shadow(0 #f7c6c6);
       box-shadow: 0 5px 2px 0 $rgb;
       &:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-      }
-      h3 {
-        text-transform: uppercase;
-        margin: 0%;
-      }
-      p {
-        text-align: center;
-        width: 200px;
-        margin: 0%;
-        font-weight: bold;
-        font-size: 17px;
+        transform: scale(1);
       }
       img {
         border-radius: 50px;
         cursor: pointer;
         transition: 400ms ease-in-out;
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1);
         }
       }
-      .__handle__Img_each__exp {
-        width: 200px;
-      }
+      
     }
   }
   .__dif__Dproduct {
@@ -1015,24 +1000,9 @@ $rgb: rgb(33, 31, 31);
         flex-direction: $cl;
         margin-bottom: 20px;
         filter: drop-shadow(0px 0 0 0);
-        transition: 400ms ease-in-out;
         width: 100%;
         &:hover {
           filter: drop-shadow(0px 0px 0px $rgb);
-        }
-        h3 {
-          text-align: center;
-          font-weight: bold;
-        }
-        ul li {
-          list-style: none;
-          font-weight: bold;
-          cursor: pointer;
-        }
-        span {
-          position: relative;
-          top: 3px;
-          color: deeppink;
         }
       }
     }
