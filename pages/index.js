@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import {
@@ -205,7 +205,7 @@ export default function Home() {
               <h2>
                 البشرة النّـــآصعة
                 <br />
-                سر جمآل المرأة
+                سر جمال المرأة
               </h2>
               {btn ? (
                 <Link
@@ -722,8 +722,9 @@ export default function Home() {
             </div>
             <div className={styles.__confirm__Child__Each}>
               <div className={styles.__handle__confim_img}>
+                
                 <img
-                  src="https://skin-new-pullzone.b-cdn.net/beer-bottle.png"
+                  src="https://skin-new-pullzone.b-cdn.net/support.png"
                   width="100%"
                   height="100%"
                   alt=""
@@ -735,7 +736,7 @@ export default function Home() {
             <div className={styles.__confirm__Child__Each}>
               <div className={styles.__handle__confim_img}>
                 <img
-                  src="https://skin-new-pullzone.b-cdn.net/support.png"
+                  src="https://skin-new-pullzone.b-cdn.net/beer-bottle.png"
                   width="100%"
                   height="100%"
                   alt=""
